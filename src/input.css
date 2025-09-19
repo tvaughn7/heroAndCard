@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Cards layout and styling via @apply */
+.cards {
+	/* Container spacing + responsive grid */
+	@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.cards div {
+	/* Each card */
+	@apply bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col;
+}
+
+.cards img {
+	/* Card image */
+	@apply w-full h-48 object-cover;
+}
+
+.cards span {
+	/* Card title */
+	@apply block text-lg font-semibold text-gray-800 mt-3 px-4;
+}
+
+.cards a {
+	/* Card button */
+	@apply mt-4 mx-4 mb-4 text-center bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors;
+}
+
+/* Note: Assuming the intent is :hover; provided as .cards a:hover explicitly */
+.cards a:hover {
+	@apply bg-blue-700;
+}
