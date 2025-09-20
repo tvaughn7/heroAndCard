@@ -3,57 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Company</title>
+  <title>Purrfect Match</title>
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-lavender text-blue">
   <!-- Header -->
-  <header class="bg-white shadow-sm">
+  <header class="bg-lavender">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <!-- Logo + Name -->
       <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center" aria-hidden="true">
-          <span class="text-white font-bold text-lg">L</span>
-        </div>
-        <span class="text-xl font-bold">Your Company</span>
+        <img src="images/PurrfectMatch.svg" alt="Purrfect Match logo" class="w-8 sm:w-10 md:w-12 lg:w-14 h-auto">
+        <span class="text-xl font-bold">Purrfect Match</span>
       </a>
 
-      <!-- Icons -->
-      <nav aria-label="Header quick actions" class="flex items-center gap-3">
-        <button class="w-9 h-9 rounded bg-gray-100 hover:bg-gray-200 flex items-center justify-center" aria-label="Shopping">
-          <span class="text-xl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-dash" viewBox="0 0 16 16">
-  <path d="M6.5 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
-  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-</svg></span>
+  <!-- Icons -->
+      <nav class="header-actions flex items-center gap-4">
+        <button class="p-1 sm:p-1.5 lg:p-2 text-blue hover:text-lilac transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bi bi-cart-dash">
+            <path d="M6.5 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+          </svg>
         </button>
-        <button class="w-9 h-9 rounded bg-gray-100 hover:bg-gray-200 flex items-center justify-center" aria-label="Profile">
-          <span class="text-xl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
-</svg></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Primary Navigation -->
-  <nav class="bg-gray-50 border-y" aria-label="Primary">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <ul class="flex items-center gap-6 py-3 text-sm font-medium">
-</svg></span>
+        <button class="p-1 sm:p-1.5 lg:p-2 text-blue hover:text-lilac transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bi bi-person-square">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+          </svg>
         </button>
       </nav>
     </div>
   </header>
 
   <!-- Primary Navigation -->
-  <nav class="bg-gray-50 border-y" aria-label="Primary">
+  <nav class="primary-nav bg-rose border-y border-lilac/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <ul class="flex items-center gap-6 py-3 text-sm font-medium">
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Home</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Products</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Cart</a></li>
-        <li><a href="#" class="text-gray-700 hover:text-blue-600">Profile</a></li>
+        <li><a href="#" class="active text-white hover:text-lilac bg-blue px-3 py-2.5 rounded">Home</a></li>
+        <li><a href="#" class="text-blue hover:text-lilac">Products</a></li>
+        <li><a href="#" class="text-blue hover:text-lilac">Cart</a></li>
+        <li><a href="#" class="text-blue hover:text-lilac">Profile</a></li>
       </ul>
     </div>
   </nav>
@@ -61,12 +49,12 @@
   <!-- Hero -->
   <section class="relative">
     <picture>
-      <!-- Desktop -->
-      <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1920x600/4F46E5/FFFFFF?text=Desktop+Hero+Image">
-      <!-- Tablet -->
-      <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1280x480/7C3AED/FFFFFF?text=Tablet+Hero+Image">
-      <!-- Mobile -->
-      <img src="https://via.placeholder.com/768x360/EC4899/FFFFFF?text=Mobile+Hero+Image" alt="Promotional hero banner" class="w-full h-auto object-cover">
+      <!-- Desktop (>= 1024px) -->
+      <source media="(min-width: 1024px)" srcset="images/catHero3x.webp">
+      <!-- Tablet (>= 768px) -->
+      <source media="(min-width: 768px)" srcset="images/catHero2x.webp">
+      <!-- Mobile fallback -->
+  <img src="images/catHero1x.webp" alt="Promotional hero banner" class="w-full h-auto object-cover" width="1920" height="1080">
     </picture>
     <!-- Optional overlay -->
     <div class="absolute inset-0 flex items-center justify-center bg-black/30">
@@ -112,5 +100,51 @@
       </div>
     </div>
   </main>
+
+  <footer class="mt-16 bg-rose text-blue border-t border-lilac/50 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 place-items-center">
+      <section class="contact">
+        <h3 class="font-bold text-lg">Purrfect Match</h3>
+        <p class="mt-2">Connecting cats with their forever homes.</p>
+        <p class="mt-2">Email: <a class="underline hover:text-lilac" href="mailto:hello@purrfectmatch.com">hello@purrfectmatch.com</a></p>
+        <p>Phone: <a class="underline hover:text-lilac" href="tel:5551234567">(555) 123-4567</a></p>
+      </section>
+
+      <section class="socialMedia">
+        <h3 class="font-bold text-lg">Follow Us</h3>
+  <div class="mt-3 flex items-center justify-center gap-4">
+          <a href="https://facebook.com" target="_blank" class="hover:text-lilac">
+            <ion-icon class="w-6 h-6" name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="hover:text-lilac">
+            <ion-icon class="w-6 h-6" name="logo-youtube"></ion-icon>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-lilac">
+            <ion-icon class="w-6 h-6" name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </section>
+
+      <section class="location">
+        <h3 class="font-bold text-lg">Visit Us</h3>
+        <address class="not-italic mt-2">
+          123 Catnip Lane, Suite 9<br />
+          Whisker City, PA 19019
+        </address>
+      </section>
+    </div>
+    <div class="bg-lavender/50">
+  <p class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm text-center">
+        © 2025 Purrfect Match. All rights reserved.
+        <a href="#" class="underline hover:text-lilac ml-2">Privacy Policy</a>
+        <span class="mx-1">|</span>
+        <a href="#" class="underline hover:text-lilac">Terms of Use</a>
+      </p>
+    </div>
+  </footer>
+
+   <script src="js/scripts.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

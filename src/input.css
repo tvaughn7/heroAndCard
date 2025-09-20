@@ -1,9 +1,22 @@
 @import "tailwindcss";
 
+/* Brand color palette */
+@theme {
+	--color-lavender: #FAE8EB; /* lightest */
+	--color-rose: #F6CACA;
+	--color-tan: #E4C2C6;
+	--color-lilac: #CD9FCC;
+	--color-blue: #0A014F; /* darkest */
+}
+
+/* Media safety: ensure media cannot overflow horizontally */
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
+picture, iframe { max-width: 100%; display: block; }
+
 /* Cards layout and styling via @apply */
 .cards {
 	/* Container spacing + responsive grid */
-	@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+	@apply max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 gap-6;
 }
 
 .cards div {
@@ -17,16 +30,102 @@
 }
 
 .cards span {
-	/* Card title */
-	@apply block text-lg font-semibold text-gray-800 mt-3 px-4;
+    /* Card title */
+	@apply block text-lg font-semibold text-blue mt-3 px-4;
 }
 
 .cards a {
-	/* Card button */
-	@apply mt-4 mx-4 mb-4 text-center bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors;
+    /* Card button */
+	@apply mt-4 mx-4 mb-4 text-center bg-blue text-white py-2 px-4 rounded transition-colors;
 }
 
 /* Note: Assuming the intent is :hover; provided as .cards a:hover explicitly */
 .cards a:hover {
-	@apply bg-blue-700;
+	@apply opacity-90;
+}
+
+/* Responsive blocks: small (>=640px), medium (>=768px), large (>=1024px) */
+@media (min-width: 640px) {
+	/* sm */
+	.cards { @apply px-6 grid-cols-2; }
+	/* Header icons scale up slightly */
+	header .header-actions svg { @apply w-7 h-7; }
+	/* Nav text a bit larger */
+	.primary-nav a { @apply text-base; }
+}
+
+@media (min-width: 768px) {
+	/* md */
+	.cards { @apply grid-cols-3; }
+	header .header-actions svg { @apply w-7 h-7; }
+}
+
+@media (min-width: 1024px) {
+	/* lg */
+	.cards { @apply px-8; }
+	header .header-actions svg { @apply w-8 h-8; }
+	/* Make hero shorter on large screens */
+	section.relative picture img { @apply object-cover; }
+}
+
+/* Small and extra-small screens (<= 767px): stack primary nav vertically */
+@media (max-width: 767px) {
+	html, body { @apply overflow-x-hidden; }
+	.primary-nav ul { @apply flex-col items-stretch gap-0 py-2; }
+	.primary-nav li { @apply w-full py-1; }
+	.primary-nav a { @apply block w-full text-left px-2 py-1; }
+	/* Ensure small screens keep a bit of side padding on the nav container */
+	.primary-nav .max-w-7xl { @apply px-3; }
+	/* Header and footer side padding */
+	header .max-w-7xl { @apply px-3; }
+	footer .max-w-7xl { @apply px-3; }
+	/* Picture elements shouldn't overflow */
+	section.relative picture { @apply block w-full; }
+	section.relative picture img { @apply w-full block; }
+	.cards { @apply px-3 gap-2 grid-cols-1; }
+}
+
+/* Extra small screens (<= 380px) */
+@media (max-width: 380px) {
+	/* Overall text slightly smaller */
+	html { @apply overflow-x-hidden; }
+	body { @apply text-xs overflow-x-hidden; }
+
+	/* Header compaction */
+	header .max-w-7xl { @apply px-3 py-1; }
+	header a > div { @apply w-8 h-8; }
+	header a span { @apply text-base; }
+	header .header-actions { @apply gap-2; }
+	header .header-actions button { @apply p-0.5; }
+	header .header-actions svg { @apply w-4 h-4; }
+
+	/* Nav density + tap targets */
+	.primary-nav { @apply overflow-x-hidden; }
+	.primary-nav .max-w-7xl { @apply px-3; }
+	.primary-nav ul { @apply gap-0 py-0; }
+	.primary-nav a { @apply text-xs flex items-center min-h-[44px] px-2 py-0 rounded; }
+	.primary-nav a.active { @apply px-2; }
+
+	/* Hero overlay text */
+	section.relative .absolute h2 { @apply text-xl; }
+	section.relative .absolute p { @apply text-xs; }
+	/* Cap hero image height to avoid dominating viewport and prevent overflow */
+	section.relative picture { @apply block w-full; }
+	section.relative picture img { @apply max-h-40 w-full block object-cover; }
+
+	/* Main padding + heading smaller */
+	main { @apply px-3; }
+	main h1 { @apply text-xl my-6; }
+
+	/* Cards compaction + tap targets with safe side padding */
+	.cards { @apply px-3 gap-2 grid-cols-1; }
+	.cards img { @apply h-28; }
+	.cards span { @apply text-sm mt-1.5 px-2; }
+	.cards a { @apply text-xs py-1 px-2 mt-3 mx-2 mb-3 min-h-[44px] flex items-center justify-center; }
+
+	/* Footer sizes + side padding */
+	footer .max-w-7xl { @apply px-3 py-5 gap-4; }
+	footer ion-icon { @apply w-4 h-4; }
+	footer p { @apply text-xs; }
+	footer > div:last-child p { @apply py-3; }
 }
